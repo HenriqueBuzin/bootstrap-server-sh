@@ -27,7 +27,7 @@ services:
       - "127.0.0.1:8086:80"
 
     volumes:
-      - /root/setup-dev/public:/usr/share/nginx/html:ro
+      - ./public:/usr/share/nginx/html:ro
 
     networks:
       - proxy-network
