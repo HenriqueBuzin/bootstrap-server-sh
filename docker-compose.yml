@@ -10,7 +10,7 @@ services:
       - "127.0.0.1:8085:80"
 
     volumes:
-      - /root/setup/public:/usr/share/nginx/html:ro
+      - ./public:/usr/share/nginx/html:ro
 
     networks:
       - proxy-network
