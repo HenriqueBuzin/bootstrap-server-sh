@@ -4,6 +4,8 @@ services:
     container_name: setup-server
     restart: unless-stopped
 
+    profiles: ["prod"]
+
     ports:
       - "127.0.0.1:8085:80"
 
@@ -12,6 +14,24 @@ services:
 
     networks:
       - proxy-network
+
+
+  setup-server-dev:
+    image: nginx:1.30.0-alpine
+    container_name: setup-server-dev
+    restart: unless-stopped
+
+    profiles: ["dev"]
+
+    ports:
+      - "127.0.0.1:8086:80"
+
+    volumes:
+      - /root/setup-dev/public:/usr/share/nginx/html:ro
+
+    networks:
+      - proxy-network
+
 
 networks:
   proxy-network:
