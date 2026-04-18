@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   ha-fln:
     container_name: ha-fln
