@@ -1,7 +1,7 @@
 services:
-  setup-server:
+  bootstrap-server-sh:
     image: nginx:1.30.0-alpine
-    container_name: setup-server
+    container_name: bootstrap-server-sh
     restart: unless-stopped
     profiles: ["prod"]
     ports:
@@ -11,9 +11,9 @@ services:
     networks:
       - proxy-network
 
-  setup-server-dev:
+  bootstrap-server-sh-dev:
     image: nginx:1.30.0-alpine
-    container_name: setup-server-dev
+    container_name: bootstrap-server-sh-dev
     restart: unless-stopped
     profiles: ["dev"]
     ports:
