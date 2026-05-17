@@ -1,7 +1,6 @@
 services:
   bootstrap-server-sh:
     image: nginx:1.30.0-alpine
-    container_name: bootstrap-server-sh
     restart: unless-stopped
     profiles: ["prod"]
     ports:
@@ -13,7 +12,6 @@ services:
 
   bootstrap-server-sh-dev:
     image: nginx:1.30.0-alpine
-    container_name: bootstrap-server-sh-dev
     restart: unless-stopped
     profiles: ["dev"]
     ports:
